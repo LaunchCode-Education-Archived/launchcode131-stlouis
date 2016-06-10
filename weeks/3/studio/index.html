@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sieve of Eratosthenes | LaunchCode's CSE131</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/launchcode131-stlouis/css/main.css">
+  <link rel="canonical" href="http://launchcodeeducation.github.io/launchcode131-stlouis/launchcode131-stlouis/weeks/3/studio/">
+  <link rel="alternate" type="application/rss+xml" title="LaunchCode's CSE131" href="http://launchcodeeducation.github.io/launchcode131-stlouis/launchcode131-stlouis/feed.xml">
+</head>
+
+
+<body>
+	<div class="wrapper writeup">
+			<div class="container">
+				<nav class="site-nav">
+					<a href="../">&larr; Week 3 Overview</a>
+				</nav>
+
+				<article class="site-content">
+					<h1>Studio 3: Sieve of Eratosthenes</h1>
+
+					 
+					<aside class="sidenote">
+						<h2 class="nocount">Logistics</h2>
+						<p><strong>Assigned:</strong> Thu, Jun 30</p>
+						<p><strong>Due:</strong> Thu, Jun 30</p>
+					</aside>
+					
+
+					<ul id="markdown-toc">
+  <li><a href="#warmups" id="markdown-toc-warmups">Warmup(s)</a></li>
+  <li><a href="#sieve-of-eratosthenes" id="markdown-toc-sieve-of-eratosthenes">Sieve of Eratosthenes</a></li>
+  <li><a href="#submitting-your-work" id="markdown-toc-submitting-your-work">Submitting your work:</a></li>
+</ul>
+
+<h1 id="warmups">Warmup(s)</h1>
+
+<ul>
+  <li>First, form a group:
+    <ul>
+      <li>If you are at a table with a large, wall-mounted screens, a group of 3-4 people is fine.</li>
+      <li>If you are seated at a table without a large screen, a group of 2 people is better.</li>
+    </ul>
+  </li>
+  <li>All but one member of your group should have this web page open so you can follow along and see the instructions as you work.</li>
+  <li>Plan to have one computer at which your team does its work. Initially, one of you will be in charge of typing at that computer.</li>
+  <li>Throughout the studio, you should trade who is in charge of the keyboard. Before doing so, <strong>commit your work</strong> to make sure your work is saved.</li>
+</ul>
+
+<h1 id="sieve-of-eratosthenes">Sieve of Eratosthenes</h1>
+
+<p>In this studio you will make a <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">sieve of Eratosthenes</a>
+on a one dimensional array. This simple, ancient algorithm finds all the prime numbers within a specified range by 
+eliminating all multiples in the array. 
+##Procedure</p>
+
+<ol>
+  <li>
+    <p>Create an array of length <strong>n</strong> and iteratively fill the array with consecutive integers starting with 2.</p>
+
+    <blockquote>
+      <p>The size of the array is the only input we need from the user.</p>
+    </blockquote>
+
+    <p>Normally we would start filling an array at the beginning (the zeroth element), but since we are filling it with
+ consecutive ascending integers, we can simplify our code by ignoring the 0 and 1 indexes, and making the 2 index 
+ in the array equal to 2, 3 equal to 3, and so on.</p>
+  </li>
+  <li>
+    <p>Start at the first number in the array (2) and iteratively find and delete all of its multiples (4, 6, 8, etc.)</p>
+
+    <blockquote>
+      <p>How should we “delete” these values?</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Once you reach the end of the array, go to the next <em>undeleted</em> element in the array and repeat this process.</p>
+
+    <blockquote>
+      <p>This way, the first element we touch is always prime. Do you see why? Why should we not bother finding multiples 
+of previously deleted numbers?</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Once you have gone through the whole array, anything remaining is a prime number. Print out these numbers.</p>
+  </li>
+</ol>
+
+<p>Ex: for n = 50 the expected output is</p>
+
+<p><code class="highlighter-rouge">
+Primes under 50 = 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47
+</code></p>
+
+<h1 id="submitting-your-work">Submitting your work:</h1>
+
+<p>To submit your work, contact the instructor or a TA. They will walk you through the submission process. Be prepared to show them the work that you have done and answer their questions about it!</p>
+
+				</article>
+			</div>
+
+			<footer class="site-footer">
+	<p>
+		<small>Generated at  2016-06-10 17:50:51 -0500</small>.
+	</p>
+	<p>
+		<small>
+			Page written by (unknown).
+			Site design by <a href="http://ben.stolovitz.com">Ben Stolovitz</a>.
+		</small>
+	</p>
+</footer>
+
+	</div>
+	<script type="text/javascript" src="/launchcode131-stlouis/js/highlight.pack.js"></script>
+	<script type="text/x-mathjax-config">
+		hljs.initHighlightingOnLoad();
+		MathJax.Hub.Config({
+		tex2jax: {
+			inlineMath: [ ["$", "$"], ["\\(", "\\)"] ],
+			processEscapes: true
+		}
+		});
+	</script>
+	<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</body>
+</html>
