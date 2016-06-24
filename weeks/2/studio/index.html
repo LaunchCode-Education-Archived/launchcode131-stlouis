@@ -110,7 +110,7 @@ stop gambling. What is the probability that you lose all of your money?</p>
 
     <blockquote>
       <p>if (lossChance != winChance)<br />
-Ruin = (lossChance/winChance)<sup>startAmount</sup> - (lossChance/winChance)<sup>winAmount</sup> / (1 - (lossChance/winChance)<sup>winAmount</sup>
+Ruin = ((lossChance/winChance)<sup>startAmount</sup> - (lossChance/winChance)<sup>winAmount</sup>) / (1 - (lossChance/winChance)<sup>winAmount</sup>)
 <br /><br />
 if (lossChance == winChance)<br />
 Ruin = 1 - startAmount / winAmount</p>
@@ -293,7 +293,7 @@ Try some of these and study their effectiveness in terms of the number of iterat
 
 			<footer class="site-footer">
 	<p>
-		<small>Generated at  2016-06-22 09:22:45 -0500</small>.
+		<small>Generated at  2016-06-23 22:41:32 -0500</small>.
 	</p>
 	<p>
 		<small>
