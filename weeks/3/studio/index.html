@@ -35,7 +35,10 @@
 
 					<ul id="markdown-toc">
   <li><a href="#warmups" id="markdown-toc-warmups">Warmup(s)</a></li>
-  <li><a href="#sieve-of-eratosthenes" id="markdown-toc-sieve-of-eratosthenes">Sieve of Eratosthenes</a></li>
+  <li><a href="#sieve-of-eratosthenes" id="markdown-toc-sieve-of-eratosthenes">Sieve of Eratosthenes</a>    <ul>
+      <li><a href="#procedure" id="markdown-toc-procedure">Procedure</a></li>
+    </ul>
+  </li>
   <li><a href="#submitting-your-work" id="markdown-toc-submitting-your-work">Submitting your work:</a></li>
 </ul>
 
@@ -57,46 +60,78 @@
 
 <p>In this studio you will make a <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">sieve of Eratosthenes</a>
 on a one dimensional array. This simple, ancient algorithm finds all the prime numbers within a specified range by 
-eliminating all multiples in the array. 
-##Procedure</p>
+eliminating all multiples in the array.</p>
+
+<h2 id="procedure">Procedure</h2>
 
 <ol>
   <li>
-    <p>Create an array of length <strong>n</strong> and iteratively fill the array with consecutive integers starting with 2.</p>
-
-    <blockquote>
-      <p>The size of the array is the only input we need from the user.</p>
-    </blockquote>
-
-    <p>Normally we would start filling an array at the beginning (the zeroth element), but since we are filling it with
- consecutive ascending integers, we can simplify our code by ignoring the 0 and 1 indexes, and making the 2 index 
- in the array equal to 2, 3 equal to 3, and so on.</p>
+    <p>Prompt the user for the size, <code class="highlighter-rouge">n</code>, of the array. The sieve will determine all the primes below <code class="highlighter-rouge">n</code>. 
+For discussion purposes, let’s say we’re dealing with <code class="highlighter-rouge">n</code> = 50</p>
   </li>
   <li>
-    <p>Start at the first number in the array (2) and iteratively find and delete all of its multiples (4, 6, 8, etc.)</p>
-
-    <blockquote>
-      <p>How should we “delete” these values?</p>
-    </blockquote>
-  </li>
-  <li>
-    <p>Once you reach the end of the array, go to the next <em>undeleted</em> element in the array and repeat this process.</p>
-
-    <blockquote>
-      <p>This way, the first element we touch is always prime. Do you see why? Why should we not bother finding multiples 
-of previously deleted numbers?</p>
-    </blockquote>
-  </li>
-  <li>
-    <p>Once you have gone through the whole array, anything remaining is a prime number. Print out these numbers.</p>
+    <p>Let’s consider the best type to make the array.</p>
   </li>
 </ol>
 
-<p>Ex: for n = 50 the expected output is</p>
+<p>Based on the gif on the linked Wikipedia page, we might initially think to choose <code class="highlighter-rouge">int</code>. If we make an 
+<code class="highlighter-rouge">int[]</code>, how should we fill it? Since 0 and 1 are not prime and don’t have normal multiples, the first
+number we care about is 2. If we fill it with the range of values (2-50) we could start at the beginning, like this:</p>
 
-<p><code class="highlighter-rouge">
-Primes under 50 = 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47
-</code></p>
+<table>
+  <tbody>
+    <tr>
+      <td>array index</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>…</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <td>array contents</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>…</td>
+      <td>51</td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li>Write code that instantiates an <code class="highlighter-rouge">int[]</code> of size <code class="highlighter-rouge">n</code>and give it a name.</li>
+  <li>Use iteration to fill your array with integers so that it matches the one above.</li>
+  <li>If everything is initially assumed to be prime, we could mark numbers as not prime by setting them equal to zero.</li>
+  <li>Start at the first number in the array (2) and iteratively mark all of its multiples (4, 6, 8, etc.) as 
+not prime.</li>
+  <li>
+    <p>Iterate to the next prime (non zero) element in the array and repeat this process.</p>
+
+    <blockquote>
+      <p>Why should we not bother finding multiples of numbers that we previously marked as not prime?</p>
+    </blockquote>
+  </li>
+  <li>Once you have gone through the whole array, anything remaining is a prime number. Print out these numbers. 
+ Ex: for n = 50 the expected output is
+ <code class="highlighter-rouge">
+ Primes under 50 = 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 51
+</code></li>
+  <li>Try looking up a number to see if it’s prime and print out the result. Show what you have so far to a TA.</li>
+  <li>Another idea, for simplicity, is ignoring the first two indexes and start inserting the 2 at the 2 index so that 
+the values and indexes match. Having clear code is much more important than wasting two spaces of memory. 
+But then, filling the array with the values is redundant! The gif can be deceiving. All we really need 
+to fill the array with is whether each index number is prime or not. Now, what type should we use to easily mark this?</li>
+  <li>Create a new array (or modify your old one) with this new type choice.</li>
+  <li>Fill your new array so that 0 and 1 are not prime, but every other number is initially prime.</li>
+  <li>Repeat steps 6-8. This time, the last prime printed should be 47.</li>
+  <li>Further food for thought: to make our program more efficient, we can stop looking for multiples early. For example, 
+we know that 40 won’t have any multiples in the array. What is the earliest we can stop looking?</li>
+</ol>
 
 <h1 id="submitting-your-work">Submitting your work:</h1>
 
@@ -107,7 +142,7 @@ Primes under 50 = 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47
 
 			<footer class="site-footer">
 	<p>
-		<small>Generated at  2016-06-23 22:41:32 -0500</small>.
+		<small>Generated at  2016-06-28 15:49:39 -0500</small>.
 	</p>
 	<p>
 		<small>
