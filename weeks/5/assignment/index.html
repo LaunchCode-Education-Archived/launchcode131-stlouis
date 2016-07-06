@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Methods | LaunchCode's CSE131</title>
-  <meta name="description" content="Warmup">
+  <meta name="description" content="">
 
   <link rel="stylesheet" href="/launchcode131-stlouis/css/main.css">
   <link rel="canonical" href="https://education.launchcode.org/launchcode131-stlouis/launchcode131-stlouis/weeks/5/assignment/">
@@ -28,58 +28,70 @@
 					 
 					<aside class="sidenote">
 						<h2 class="nocount">Logistics</h2>
-						<p><strong>Assigned:</strong> Tue, Jul 12</p>
+						<p><strong>Assigned:</strong> Mon, Jul 11</p>
 						<p><strong>Due:</strong> Mon, Jul 18</p>
 					</aside>
 					
 
-					<h4 id="warmup">Warmup</h4>
+					<ul id="markdown-toc">
+  <li><a href="#warmup" id="markdown-toc-warmup">Warmup</a></li>
+  <li><a href="#methods" id="markdown-toc-methods">Methods</a></li>
+</ul>
+
+<h1 id="warmup">Warmup</h1>
 
 <ul>
-  <li>Update your repository and look for the package <strong>lab5</strong> in the <strong>labs</strong>
-source folder.</li>
   <li>
-    <p>As we did in studio, the code you develop for this lab is tested using <strong>JUnit</strong> as follows:</p>
+    <p>Update your repository and look for the package <code class="highlighter-rouge">lab5</code> in the <code class="highlighter-rouge">labs</code> source folder.</p>
+  </li>
+  <li>
+    <p>As we did in studio, the code you develop for this lab is tested using <code class="highlighter-rouge">JUnit</code> as follows:</p>
 
     <ol>
-      <li>Right-click on <strong>Lab5Tester</strong></li>
-      <li>Choose <strong>Run As…</strong></li>
-      <li>Choose <strong>JUnit Test</strong></li>
+      <li>Right-click on <code class="highlighter-rouge">Lab5Tester</code></li>
+      <li>Choose <code class="highlighter-rouge">Run As...</code></li>
+      <li>Choose <code class="highlighter-rouge">JUnit Test</code></li>
     </ol>
   </li>
-  <li>If all goes well, you will see the results of the run in the JUnit panel. A green bar indicates all tests passed.</li>
-  <li>Review the course slides, text, and your studio work if necessary.</li>
+  <li>
+    <p>If all goes well, you will see the results of the run in the JUnit panel. A green bar indicates all tests passed.</p>
+  </li>
+  <li>
+    <p>Review the course videos, text, and your studio work if necessary.</p>
+  </li>
 </ul>
 
-<hr />
+<p>At this point you should understand the following:</p>
 
 <ul>
   <li>
-    <p>At this point you should understand the following:</p>
-
-    <ul>
-      <li>The methods you write must agree in name, input parameter types, and output parameter type with the specification given here.  Otherwise, the unit tests will not not work.</li>
-      <li>When something goes wrong, JUnit shows you a red bar.  An X appears next to the failing test method(s), and if you click on those in the JUnit window, the Failure Trace window explains what was expected and what was seen.</li>
-    </ul>
+    <p>The methods you write must agree in name, input parameter types, and output parameter type with the specification given here.  Otherwise, the unit tests will not not work.</p>
+  </li>
+  <li>
+    <p>When something goes wrong, JUnit shows you a red bar.  An X appears next to the failing test method(s), and if you click on those in the JUnit window, the Failure Trace window explains what was expected and what was seen.</p>
   </li>
 </ul>
 
-<hr />
-
-<h4 id="methods">Methods</h4>
+<h1 id="methods">Methods</h1>
 
 <p>We strongly suggest that you proceed <strong>one method at a time</strong> through the work below,testing each time to be sure what you have written so far is correct.</p>
 
 <p>If you show up for help with a bunch of methods that don’t work because you typed them all in before testing anything, we may not be able to help you until you clean up your code and focus on one method at a time.</p>
 
 <ol>
-  <li>Open the provided files <strong>Lab5Methods</strong> and <strong>Lab5Tester</strong>.</li>
+  <li>
+    <p>Open the provided files <code class="highlighter-rouge">Lab5Methods</code> and <code class="highlighter-rouge">Lab5Tester</code>.</p>
+  </li>
   <li>
     <p>For each of the following specifications,</p>
 
     <ul>
-      <li>create a <strong>static</strong> method in <strong>Lab5Methods</strong> that implements the specification, and</li>
-      <li>run the <strong>Lab5Tester</strong> JUnit test to see if your work is correct.</li>
+      <li>
+        <p>create a <code class="highlighter-rouge">static</code> method in <code class="highlighter-rouge">Lab5Methods</code> that implements the specification, and</p>
+      </li>
+      <li>
+        <p>run the <code class="highlighter-rouge">Lab5Tester</code> JUnit test to see if your work is correct.</p>
+      </li>
     </ul>
   </li>
   <li>
@@ -94,34 +106,23 @@ source folder.</li>
 
     <p>EXAMPLES:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>       sumDownBy2(7) is 7+5+3+1 = 16
+    <p>sumDownBy2(7) is 7+5+3+1 = 16</p>
 
-       sumDownBy2(8) is 8+6+4+2 = 20
+    <p>sumDownBy2(8) is 8+6+4+2 = 20</p>
 
-       sumDownBy2(0) is 0
+    <p>sumDownBy2(0) is 0</p>
 
-       sumDownBy2(-1) is 0
-</code></pre>
-    </div>
+    <p>sumDownBy2(-1) is 0</p>
 
     <blockquote>
-      <p>At this point you should have run the JUnit test and determined whether your
-<strong>sumDownBy2</strong> works properly.  Don’t push ahead until you pass that part of
+      <p>At this point you should have run the JUnit test and determined whether your <code class="highlighter-rouge">sumDownBy2</code> works properly.  Don’t push ahead until you pass that part of
 the JUnit test.</p>
-    </blockquote>
 
-    <blockquote>
-      <p>Continue the lab in this fashion:  write code, test the code, and then
-move forward.</p>
+      <p>Continue the lab in this fashion:  write code, test the code, and then move forward.</p>
     </blockquote>
   </li>
-</ol>
-
-<hr />
-
-<ol>
   <li>
-    <p>Write and test a method <strong>harmonicSum</strong> with the following specification.</p>
+    <p>Write and test a method <code class="highlighter-rouge">harmonicSum</code> with the following specification.</p>
 
     <p>PARAMETERS:   a positive integer, n</p>
 
@@ -131,58 +132,44 @@ move forward.</p>
       <p><strong>Warning</strong> Think carefully about this method’s return type!</p>
     </blockquote>
   </li>
-</ol>
-
-<hr />
-
-<ol>
   <li>
-    <p>Write and test a method called <strong>geometricSum</strong> with the following specification.</p>
+    <p>Write and test a method called <code class="highlighter-rouge">geometricSum</code> with the following specification.</p>
 
     <p>PARAMETERS:   a non-negative integer, k</p>
 
     <p>RETURN VALUE: the sum 1 + 1/2 + 1/4 + 1/8 + … + 1/Math.pow(2,k)</p>
   </li>
-</ol>
-
-<hr />
-
-<ol>
   <li>
-    <p>Write and test a method <strong>multPos</strong> that takes in two positive integers and returns their product.</p>
+    <p>Write and test a method <code class="highlighter-rouge">multPos</code> that takes in two positive integers and returns their product.</p>
 
     <p>PARAMETERS:   positive integers j and k</p>
 
     <p>RETURN VALUE: the product j*k</p>
 
     <blockquote>
-      <p>You must accomplish this
-<strong>without using the multiplication operator</strong>. Use iteration and repeated addition
-to form the product.</p>
+      <p>You must accomplish this <strong>without using the multiplication operator</strong>. Use iteration and repeated addition to form the product.</p>
     </blockquote>
   </li>
-</ol>
-
-<hr />
-
-<ol>
   <li>
-    <p>Write and test a method <strong>mult</strong> that takes in two integers and returns their product.
-Each integer could be positive, negative, or zero.</p>
+    <p>Write and test a method <code class="highlighter-rouge">mult</code> that takes in two integers and returns their product. Each integer could be positive, negative, or zero.</p>
 
     <p>PARAMETERS:   integers j and k</p>
 
     <p>RETURN VALUE: the product j*k</p>
 
-    <p>Do this by calling your <strong>multPos</strong> method:
- * Pass <strong>multPos</strong> the absolute values of <strong>j</strong> and <strong>k</strong>.  It should return the product of those positive values.
- * Compute this method’s return value based on the result of <strong>multPos</strong> and based on the signs of <strong>j</strong> and <strong>k</strong>.</p>
+    <p>Do this by calling your <code class="highlighter-rouge">multPos</code> method:</p>
 
-    <hr />
+    <ul>
+      <li>
+        <p>Pass <code class="highlighter-rouge">multPos</code> the absolute values of <code class="highlighter-rouge">j</code> and <code class="highlighter-rouge">k</code>.  It should return the product of those positive values.</p>
+      </li>
+      <li>
+        <p>Compute this method’s return value based on the result of <code class="highlighter-rouge">multPos</code> and based on the signs of <code class="highlighter-rouge">j</code> and <code class="highlighter-rouge">k</code>.</p>
+      </li>
+    </ul>
   </li>
   <li>
-    <p>Write and test a method <strong>expt</strong> with the following specification.  Use repeated multiplication.
-(Do not use the built-in exponentiation method.)</p>
+    <p>Write and test a method <code class="highlighter-rouge">expt</code> with the following specification.  Use repeated multiplication. (Do not use the built-in exponentiation method.)</p>
 
     <p>PARAMETERS:   integers n and k, where k &gt;= 0</p>
 
@@ -190,18 +177,14 @@ Each integer could be positive, negative, or zero.</p>
 
     <p>EXAMPLES:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>       expt(3,2) is 9
+    <p>expt(3,2) is 9</p>
 
-       expt(5,0) is 1
+    <p>expt(5,0) is 1</p>
 
-       expt(2,5) is 32
-</code></pre>
-    </div>
+    <p>expt(2,5) is 32</p>
   </li>
   <li>
-    <p>Before you demo, go back to your methods and type in JavaDoc comments above each
-method declaration.   Recall that eclipse helps you do this if you start out by
-typing <strong>/</strong>** above a method declaration.</p>
+    <p>Before you demo, go back to your methods and type in JavaDoc comments above each method declaration.   Recall that eclipse helps you do this if you start out by typing <code class="highlighter-rouge">/\*\*</code> above a method declaration.</p>
   </li>
 </ol>
 
@@ -210,7 +193,7 @@ typing <strong>/</strong>** above a method declaration.</p>
 
 			<footer class="site-footer">
 	<p>
-		<small>Generated at  2016-07-02 10:10:43 -0500</small>.
+		<small>Generated at  2016-07-06 14:17:44 -0500</small>.
 	</p>
 	<p>
 		<small>
