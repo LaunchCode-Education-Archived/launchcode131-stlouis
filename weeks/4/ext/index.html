@@ -184,7 +184,7 @@ below in red, with the three frequency factors shown in black:</p>
   <li>The <FONT COLOR="red">red solid waveform</FONT> is literally the sum of the</li>
 </ul>
 <FONT COLOR="black">black dotted waveforms</FONT>
-<p>.  The 
+<p>. The 
 sound you produce is sampled from the red waveform, and that <strong>is</strong> the
 subject of this extension.</p>
 
@@ -333,24 +333,28 @@ Ask for help as needed!</p>
 
 <p><img src="../../../extensions/instr.jpg" alt="" /></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>* The black waveform with the largest &lt;a href="http://en.wikipedia.org/wiki/Amplitude"&gt;amplitude&lt;/a&gt; (the tallest
+<ul>
+  <li>
+    <p>The black waveform with the largest <a href="http://en.wikipedia.org/wiki/Amplitude">amplitude</a> (the tallest
 black waveform) is the fundamental frequency
 at relative strength 1.  The waves shown are for 1/440 of a second of a
-440&amp;nbsp;Hz concert-A.  This is sufficient ot show one full cycle of that
-fundamental frequency.
-
-* The black waveform with the next largest amplitude has relative strength 0.75.  It is
+440 Hz concert-A.  This is sufficient ot show one full cycle of that
+fundamental frequency.</p>
+  </li>
+  <li>
+    <p>The black waveform with the next largest amplitude has relative strength 0.75.  It is
 an octave higher, so it oscillates twice in the timespan of the
-fundamental pitch's waveform, at 880&amp;nbsp;Hz.
-* The black waveform of smallest amplitude (at half the strength of
-the fundamental frequency) is 660&amp;nbsp;Hz: the 3:2 frequency factor, which sounds
+fundamental pitch’s waveform, at 880 Hz.</p>
+  </li>
+  <li>
+    <p>The black waveform of smallest amplitude (at half the strength of
+the fundamental frequency) is 660 Hz: the 3:2 frequency factor, which sounds
 like a fifth above the fundamental frequency.  As expected, it exhibits 
-1.5 cycles in the timespan of the fundamental pitch's waveform.
-* The red waveform is the sum of the black ones.
-</code></pre>
-</div>
-
-<ul>
+1.5 cycles in the timespan of the fundamental pitch’s waveform.</p>
+  </li>
+  <li>
+    <p>The red waveform is the sum of the black ones.</p>
+  </li>
   <li>
     <p>Each of the frequency factors incorporated into an instrument
 is shown separately by plotting dots of the curve as the values
@@ -389,7 +393,7 @@ above.</p>
 </dl>
 
 <blockquote>
-  <p>A video demonstrating my solution can be found <img src="../../../extensions/magic8ball.mp4" alt="" /></p>
+  <p>A video demonstrating my solution can be found <a href="../../../extensions/magic8ball.mp4">here</a></p>
 </blockquote>
 
 <p>The <a href="http://en.wikipedia.org/wiki/Magic_8-Ball">Magic Eight Ball</a>
@@ -560,9 +564,13 @@ press action would require the mouse to be released, and then pressed again.</p>
 
 <dl>
   <dt>Mouse release</dt>
-  <dd>If a mouse has been pressed, then it can be released.  Some applications distinguish between the press and release, so that the mouse can move between those actions.  This is sometimes called <i>dragging</i> the mouse.</dd>
+  <dd>
+    <p>If a mouse has been pressed, then it can be released.  Some applications distinguish between the press and release, so that the mouse can move between those actions.  This is sometimes called <i>dragging</i> the mouse.</p>
+  </dd>
   <dt>Mouse click</dt>
-  <dd>While this is a compound action, consisting of a mouse press followed by a mouse release, it is usually treated as an atomic action that takes place at exactly one coordinate.  The release also happens within some reasonable timeframe of the press, if the press and release are to be construed as a click.</dd>
+  <dd>
+    <p>While this is a compound action, consisting of a mouse press followed by a mouse release, it is usually treated as an atomic action that takes place at exactly one coordinate.  The release also happens within some reasonable timeframe of the press, if the press and release are to be construed as a click.</p>
+  </dd>
 </dl>
 
 <p>The above mouse actions are the logical ones that we wish
@@ -573,31 +581,36 @@ discover the other actions.</p>
 <p>The Sedgwick API offers only the following interface, which
 we must use in our application to simulate the above mouse actions.</p>
 
-<p><code class="highlighter-rouge">double mouseX()</code>
-:returns the x-coordinate of the mouse, expressed in terms of the coordinates of the <code class="highlighter-rouge">StdDraw</code> canvas.</p>
-
 <dl>
+  <dt><code class="highlighter-rouge">double mouseX()</code></dt>
+  <dd>
+    <p>returns the x-coordinate of the mouse, expressed in terms of the coordinates of the <code class="highlighter-rouge">StdDraw</code> canvas.</p>
+  </dd>
   <dt><code class="highlighter-rouge">double mouseY()</code></dt>
-  <dd>returns the y-coordinate of the mouse, expressed in terms of the coordinates of the <code class="highlighter-rouge">StdDraw</code> canvas.</dd>
+  <dd>
+    <p>returns the y-coordinate of the mouse, expressed in terms of the coordinates of the <code class="highlighter-rouge">StdDraw</code> canvas.</p>
+  </dd>
   <dt><code class="highlighter-rouge">boolean mousePressed()</code></dt>
-  <dd>A better name for this would be <code class="highlighter-rouge">boolean isMouseDown()</code>, because
+  <dd>
+    <p>A better name for this would be <code class="highlighter-rouge">boolean isMouseDown()</code>, because
 this method does not detect a mouse press in the standard view of mouse
 actions.  Instead it simply reports whether the mouse button is currently 
-pressed or not.</dd>
+pressed or not.</p>
+  </dd>
 </dl>
 
 <p>Your task is to simulate a mouse-click action using the above API.<br />
 This will inevitably involve <em>polling</em> the mouse as to whether the
 button is down or up.  Consider the following code:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>			while (!StdDraw.mousePressed()) {
-				// do nothing, 
-				// we are waiting for the mouse button to go down  
-				//
-				// The line below is important, as described below
-				//
-				StdDraw.show(50);
-			}
+<div class="highlighter-rouge"><pre class="highlight"><code>while (!StdDraw.mousePressed()) {
+	// do nothing, 
+	// we are waiting for the mouse button to go down  
+	//
+	// The line below is important, as described below
+	//
+	StdDraw.show(50);
+}
 </code></pre>
 </div>
 
@@ -739,16 +752,26 @@ variable as in the previous method, but rather are called on a generic object of
 </ul>
 
 <dl>
-  <dt><a href="char charAt\(int i\)">http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#charAt(int)</a></dt>
-  <dd>Returns the character at index <code class="highlighter-rouge">i</code> in <code class="highlighter-rouge">t</code>.</dd>
-  <dt><a href="boolean Character.isDigit\(char c\)">https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html#isDigit(char)</a></dt>
-  <dd>Returns true if <code class="highlighter-rouge">c</code> is a digit and false otherwise.</dd>
-  <dt><a href="boolean Character.isWhitespace\(char c\)">https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html#isWhitespace(char)</a></dt>
-  <dd>Returns true if <code class="highlighter-rouge">c</code> is white space.</dd>
-  <dt><a href="String Character.toString\(char c\)">https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html#toString(char)</a></dt>
-  <dd>Returns the <code class="highlighter-rouge">String</code> representation of a character.</dd>
-  <dt><a href="int Integer.parseInt\(String s\)">https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html#parseInt(java.lang.String)</a></dt>
-  <dd>Returns the <code class="highlighter-rouge">int</code> representation of a String.</dd>
+  <dt><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#charAt(int)">char charAt(int i)</a></dt>
+  <dd>
+    <p>Returns the character at index <code class="highlighter-rouge">i</code> in <code class="highlighter-rouge">t</code>.</p>
+  </dd>
+  <dt><a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html#isDigit(char)">boolean Character.isDigit(char c)</a></dt>
+  <dd>
+    <p>Returns true if <code class="highlighter-rouge">c</code> is a digit and false otherwise.</p>
+  </dd>
+  <dt><a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html#isWhitespace(char)">boolean Character.isWhitespace(char c)</a></dt>
+  <dd>
+    <p>Returns true if <code class="highlighter-rouge">c</code> is white space.</p>
+  </dd>
+  <dt><a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Character.html#toString(char)">String Character.toString(char c)</a></dt>
+  <dd>
+    <p>Returns the <code class="highlighter-rouge">String</code> representation of a character.</p>
+  </dd>
+  <dt><a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html#parseInt(java.lang.String)">int Integer.parseInt(String s)</a></dt>
+  <dd>
+    <p>Returns the <code class="highlighter-rouge">int</code> representation of a String.</p>
+  </dd>
 </dl>
 
 <ol>
@@ -770,7 +793,7 @@ variable as in the previous method, but rather are called on a generic object of
 
 			<footer class="site-footer">
 	<p>
-		<small>Generated at  2016-07-11 10:54:15 -0500</small>.
+		<small>Generated at  2016-07-11 11:00:37 -0500</small>.
 	</p>
 	<p>
 		<small>
