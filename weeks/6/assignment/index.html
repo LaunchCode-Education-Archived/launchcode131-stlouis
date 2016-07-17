@@ -33,120 +33,184 @@
 					</aside>
 					
 
-					<h3 id="procedure">Procedure</h3>
+					<h1 id="procedure">Procedure</h1>
 
-<blockquote>
-  <p>Preparation:</p>
-</blockquote>
+<p>Preparation:</p>
 
-<blockquote>
-  <ul>
-    <li>It is suggested that you do this lab with somebody else, in pairs.</li>
-    <li>If you choose to work in pairs, both group members must understand all written an coded material.</li>
-    <li>Complete your work in either member’s repository.</li>
-    <li>When you demo, both group members must be present.</li>
-  </ul>
-</blockquote>
+<ul>
+  <li>
+    <p>It is suggested that you do this lab with somebody else, in pairs.</p>
+  </li>
+  <li>
+    <p>If you choose to work in pairs, both group members must understand all written an coded material.</p>
+  </li>
+  <li>
+    <p>Complete your work in either member’s repository.</p>
+  </li>
+  <li>
+    <p>When you demo, both group members must be present.</p>
+  </li>
+</ul>
 
 <p>Update your repository so that you see a <code class="highlighter-rouge">lab6</code> package in the <code class="highlighter-rouge">labs</code> source folder.</p>
 
-<h4 id="consider-the-old-camp-song">1. Consider the old camp song:</h4>
-<blockquote>
-  <p><em>n</em> bottles of beer on the wall, <em>n</em> bottles of beer;
+<ol>
+  <li>
+    <p>Consider the old camp song:</p>
+
+    <blockquote>
+      <p><em>n</em> bottles of beer on the wall, <em>n</em> bottles of beer;
 you take one down, pass it around, <em>n-1</em> bottles of beer on the wall.</p>
 
-  <p><em>n-1</em> bottles of beer on the wall, <em>n-1</em> bottles of beer;
+      <p><em>n-1</em> bottles of beer on the wall, <em>n-1</em> bottles of beer;
 you take one down, pass it around, <em>n-2</em> bottles of beer on the wall.</p>
-</blockquote>
+    </blockquote>
 
-<p>and so on down to 0 bottles of beer on the wall.</p>
+    <p>and so on down to 0 bottles of beer on the wall.</p>
 
-<ul>
-  <li>Find the recursive substructure in the above song.</li>
-  <li>Create a new class <code class="highlighter-rouge">Beer</code> in your <code class="highlighter-rouge">lab6</code> package.</li>
-</ul>
+    <ul>
+      <li>
+        <p>Find the recursive substructure in the above song.</p>
+      </li>
+      <li>
+        <p>Create a new class <code class="highlighter-rouge">Beer</code> in your <code class="highlighter-rouge">lab6</code> package.</p>
+      </li>
+    </ul>
 
-<blockquote>
-  <p>Be sure to check the box that asks for <code class="highlighter-rouge">public static void main</code> to be generated.</p>
-</blockquote>
+    <blockquote>
+      <p>Be sure to check the box that asks for <code class="highlighter-rouge">public static void main</code> to be generated.</p>
+    </blockquote>
 
-<ul>
-  <li>In your <code class="highlighter-rouge">Beer</code> class, develop a recursive algorithm <code class="highlighter-rouge">String bottlesOfBeer(int n)</code> that computes the song starting at <em>n</em> and ending at <em>0</em>. Your recursive method should not print anything, but when your algorithm is working, print the string finally returned by the recursive method.</li>
-  <li>Write code into the main method of <code class="highlighter-rouge">Beer</code> to call <code class="highlighter-rouge">bottlesOfBeer(5)</code> and print out the string returned by that method.</li>
-  <li>Test your program for other input parameters. Be prepared to demo this for a TA to receive credit for this lab.</li>
-</ul>
+    <ul>
+      <li>
+        <p>In your <code class="highlighter-rouge">Beer</code> class, develop a recursive algorithm <code class="highlighter-rouge">String bottlesOfBeer(int n)</code> that computes the song starting at <em>n</em> and ending at <em>0</em>. Your recursive method should not print anything, but when your algorithm is working, print the string finally returned by the recursive method.</p>
+      </li>
+      <li>
+        <p>Write code into the main method of <code class="highlighter-rouge">Beer</code> to call <code class="highlighter-rouge">bottlesOfBeer(5)</code> and print out the string returned by that method.</p>
+      </li>
+      <li>
+        <p>Test your program for other input parameters. Be prepared to demo this for a TA to receive credit for this lab.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Here is a simple but interesting recursive function.</p>
 
-<h4 id="here-is-a-simple-but-interesting-recursive-function">2. Here is a simple but interesting recursive function.</h4>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>    f(x) =    x-10     if x &gt; 100
-         = f(f(x+11))  if x &lt;= 100
+    <div class="highlighter-rouge"><pre class="highlight"><code> f(x) =    x-10     if x &gt; 100
+      = f(f(x+11))  if x &lt;= 100
 </code></pre>
-</div>
+    </div>
 
-<ul>
-  <li>Using the substitution model, sketch the computation of <code class="highlighter-rouge">f(99)</code>.</li>
-</ul>
-
-<blockquote>
-  <p>Be prepared to show your substitution model computation to a TA when you demo.</p>
-</blockquote>
-
-<ul>
-  <li>Sketch the computation of <code class="highlighter-rouge">f(87)</code>.</li>
-  <li>Be prepared to answer the following questions about the above code:
     <ul>
-      <li>Will this function terminate for all positive integers supplied as arguments.</li>
-      <li>What do you expect this function to do for values of x &gt; 100?</li>
-      <li>How will it behave for values &lt;= 100?</li>
+      <li>Using the substitution model, sketch the computation of <code class="highlighter-rouge">f(99)</code>.</li>
+    </ul>
+
+    <blockquote>
+      <p>Be prepared to show your substitution model computation to a TA when you demo.</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <p>Sketch the computation of <code class="highlighter-rouge">f(87)</code>.</p>
+      </li>
+      <li>
+        <p>Be prepared to answer the following questions about the above code:</p>
+
+        <ul>
+          <li>
+            <p>Will this function terminate for all positive integers supplied as arguments.</p>
+          </li>
+          <li>
+            <p>What do you expect this function to do for values of x &gt; 100?</p>
+          </li>
+          <li>
+            <p>How will it behave for values &lt;= 100?</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>In the <code class="highlighter-rouge">Methods</code> class, implement the function, test it to develop or valdiate your hypotheses, and be prepared to demo your function to a TA.</p>
+      </li>
     </ul>
   </li>
-  <li>In the <code class="highlighter-rouge">Methods</code> class, implement the function, test it to develop or valdiate your hypotheses, and be prepared to demo your function to a TA.</li>
-</ul>
+  <li>
+    <p>Here is another interesting recursive function:</p>
 
-<h4 id="here-is-another-interesting-recursive-function">3. Here is another interesting recursive function:</h4>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>    g(x,y)  = y+1               if x = 0
-            = g(x-1,1)          if x &gt; 0 and y = 0
-            = g(x-1, g(x, y-1)) if x &gt; 0 and y &gt; 0
+    <div class="highlighter-rouge"><pre class="highlight"><code> g(x,y)  = y+1               if x = 0
+         = g(x-1,1)          if x &gt; 0 and y = 0
+         = g(x-1, g(x, y-1)) if x &gt; 0 and y &gt; 0
 </code></pre>
-</div>
+    </div>
 
-<ul>
-  <li>Using the substitution model, sketch the computations  of
     <ul>
-      <li>g(1,0)</li>
-      <li>g(1,2)</li>
-      <li>g(2,2)</li>
+      <li>
+        <p>Using the substitution model, sketch the computations  of</p>
+
+        <ul>
+          <li>
+            <p>g(1,0)</p>
+          </li>
+          <li>
+            <p>g(1,2)</p>
+          </li>
+          <li>
+            <p>g(2,2)</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Will this function terminate for all positive integers supplied as arguments?</p>
+      </li>
+      <li>
+        <p>How do you expect this function behave with respect to <strong>x</strong> and <strong>y</strong>?</p>
+      </li>
+      <li>
+        <p>Implement it and try it out for values of x &lt; 4 and various values of y.</p>
+      </li>
+      <li>
+        <p>Now try it for x = 4 and various values of y.</p>
+      </li>
+      <li>
+        <p>What do you see?</p>
+      </li>
+    </ul>
+
+    <blockquote>
+      <p>You may be interested to know that the red square button will terminate your application.</p>
+    </blockquote>
+
+    <ul>
+      <li>Why does the function behave this way?</li>
     </ul>
   </li>
-  <li>Will this function terminate for all positive integers supplied as arguments?</li>
-  <li>How do you expect this function behave with respect to <strong>x</strong> and <strong>y</strong>?</li>
-  <li>Implement it and try it out for values of x &lt; 4 and various values of y.</li>
-  <li>Now try it for x = 4 and various values of y.</li>
-  <li>What do you see?</li>
-</ul>
+  <li>
+    <p>Consider the picture below.</p>
 
-<blockquote>
-  <p>You may be interested to know that the red square button will terminate your application.</p>
-</blockquote>
-
-<ul>
-  <li>Why does the function behave this way?</li>
-</ul>
-
-<h4 id="consider-the-picture-below">4. Consider the picture below.</h4>
-
-<ul>
-  <li>Think about what you see:  what is foreground and what is background?</li>
-  <li>Develop an approach for drawing the figure recursively.
     <ul>
-      <li>What is the base case?</li>
-      <li>What are the recursive calls doing?</li>
+      <li>
+        <p>Think about what you see:  what is foreground and what is background?</p>
+      </li>
+      <li>
+        <p>Develop an approach for drawing the figure recursively.</p>
+
+        <ul>
+          <li>
+            <p>What is the base case?</p>
+          </li>
+          <li>
+            <p>What are the recursive calls doing?</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Create a <code class="highlighter-rouge">Triangles</code> class in the <code class="highlighter-rouge">lab6</code> package.</p>
+      </li>
+      <li>
+        <p>Implement your ideas in the <code class="highlighter-rouge">Triangles</code> class, and be prepared to demo and discuss your code to a TA to receive credit for this lab.</p>
+      </li>
     </ul>
   </li>
-  <li>Create a <code class="highlighter-rouge">Triangles</code> class in the <code class="highlighter-rouge">lab6</code> package.</li>
-  <li>Implement your ideas in the <code class="highlighter-rouge">Triangles</code> class, and be prepared to demo and discuss your code to a TA to receive credit for this lab.</li>
-</ul>
+</ol>
 
 <p><img src="../../../_studios/triangle.png" alt="Sierpinski Triangle" /></p>
 
@@ -155,7 +219,7 @@ you take one down, pass it around, <em>n-2</em> bottles of beer on the wall.</p>
 
 			<footer class="site-footer">
 	<p>
-		<small>Generated at  2016-07-11 11:06:18 -0500</small>.
+		<small>Generated at  2016-07-17 17:27:47 -0500</small>.
 	</p>
 	<p>
 		<small>
