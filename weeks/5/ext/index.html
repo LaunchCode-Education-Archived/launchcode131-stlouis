@@ -61,7 +61,7 @@
   </li>
   <li><a href="#extension-9-net-present-value" id="markdown-toc-extension-9-net-present-value">Extension 9: Net Present Value</a>    <ul>
       <li><a href="#present-value" id="markdown-toc-present-value">Present Value</a></li>
-      <li><a href="#two-friends-and-your-1" id="markdown-toc-two-friends-and-your-1">Two Friends and your $$1</a></li>
+      <li><a href="#two-friends-and-your-361" id="markdown-toc-two-friends-and-your-361">Two Friends and your $1</a></li>
       <li><a href="#net-present-value" id="markdown-toc-net-present-value">Net Present Value</a></li>
       <li><a href="#product-development-story" id="markdown-toc-product-development-story">Product Development Story</a></li>
       <li><a href="#procedure-5" id="markdown-toc-procedure-5">Procedure</a></li>
@@ -657,7 +657,7 @@ This is based on the observations:</p>
 <ul>
   <li>
     <p>While we live in the present, we understand the value of
-  $$1 in terms of what it can buy today.</p>
+  $1 in terms of what it can buy today.</p>
   </li>
   <li>
     <p>It’s difficult for us to think of what a dollar
@@ -674,8 +674,8 @@ This is based on the observations:</p>
 <p>The ideas discussed here are widely used in economics, finanace, and
 accounting.</p>
 
-<h2 id="two-friends-and-your-1">Two Friends and your $$1</h2>
-<p>Suppose you have $$1 and two friends who offer to take your dollar under the
+<h2 id="two-friends-and-your-361">Two Friends and your $1</h2>
+<p>Suppose you have $1 and two friends who offer to take your dollar under the
 following circumstances:</p>
 
 <table>
@@ -686,8 +686,8 @@ following circumstances:</p>
   </tbody>
 </table>
 
-<p>This friend takes your $$1 
-and gives you back $$5 tomorrow.</p>
+<p>This friend takes your $1 
+and gives you back $5 tomorrow.</p>
 
 <table>
   <tbody>
@@ -697,27 +697,27 @@ and gives you back $$5 tomorrow.</p>
   </tbody>
 </table>
 
-<p>This friend takes your $$1 and gives you 
-back $$10 in fifty years.</p>
+<p>This friend takes your $1 and gives you 
+back $10 in fifty years.</p>
 
 <p>Which friend is offering you the better deal?</p>
 
 <ul>
   <li>
     <p>If we consider only the number of dollars you receive from these
-  two friends, then in 50 years you end up with either $$5, 
-  or $$10.</p>
+  two friends, then in 50 years you end up with either $5, 
+  or $10.</p>
   </li>
   <li>
     <p>It may therefore seem that Friend Two is offering you the better deal.</p>
   </li>
   <li>
-    <p>However, we know that $$10 fifty years from now is 
-  not worth $$10 today.</p>
+    <p>However, we know that $10 fifty years from now is 
+  not worth $10 today.</p>
   </li>
 </ul>
 
-<p>How do we reason about the value of $$10 in fifty years?  We must first model
+<p>How do we reason about the value of $10 in fifty years?  We must first model
 how the value of money changes over time.  We do this by choosing:</p>
 
 <ul>
@@ -744,7 +744,7 @@ to compute the following:</p>
 
 <ul>
   <li>
-    <p>What would $$1 be worth in fifty years if invested with some
+    <p>What would $1 be worth in fifty years if invested with some
   rate of return <em>r</em>?</p>
 
     <p>We model this computation by the function</p>
@@ -753,12 +753,12 @@ to compute the following:</p>
   futureValue(dollars, years, r) = dollars &amp;times; (1.0 + r) ^ years
  </code></p>
 
-    <p>Thus, $$1 is the same now 
-  as $$117 dollars fifty years from now.</p>
+    <p>Thus, $1 is the same now 
+  as $117 dollars fifty years from now.</p>
   </li>
   <li>
     <p>How much would I have to set aside today so that it would be worth
-  $$1 in fifty years using the discount
+  $1 in fifty years using the discount
   rate <em>r</em>?</p>
 
     <p>We model this computation by computing the reverse (running time backwards)
@@ -768,7 +768,7 @@ to compute the following:</p>
   presentValue(dollars, years, r) = dollars / (1.0 + r) ^ years
  </code></p>
 
-    <p>Thus, to have $$1 fifty years from now, we would have to set aside
+    <p>Thus, to have $1 fifty years from now, we would have to set aside
   0.854 cents (less than one cent) now.</p>
   </li>
 </ul>
@@ -791,58 +791,58 @@ time annually.</p>
 
 <ul>
   <li>
-    <p>This friend takes your $$1 and gives 
-  you back $$5 tomorrow.</p>
+    <p>This friend takes your $1 and gives 
+  you back $5 tomorrow.</p>
   </li>
   <li>
     <p>With money changing
-  value annually, $$5 tomorrow 
-  is the same as $$5 today.</p>
+  value annually, $5 tomorrow 
+  is the same as $5 today.</p>
   </li>
   <li>
     <p>Computing</p>
 
     <p><code class="highlighter-rouge">
-  presentValue(\$\$5, 0, 0.10) = \$\$5 / (1.0 + 0.10) ^ 0
+  presentValue(&amp;#36;5, 0, 0.10) = &amp;#36;5 / (1.0 + 0.10) ^ 0
  </code></p>
 
-    <p>yields $$5.</p>
+    <p>yields $5.</p>
   </li>
   <li>
-    <p>This friend’s offer is therefore worth $$5 today.</p>
+    <p>This friend’s offer is therefore worth $5 today.</p>
   </li>
   <li>
-    <p>Your <em>net</em> gain is the $$5 you receive <em>minus</em> the $$1 you gave 
-  away, so you net $$4.</p>
+    <p>Your <em>net</em> gain is the $5 you receive <em>minus</em> the $1 you gave 
+  away, so you net $4.</p>
   </li>
 </ul>
 
-<p>Because your <em>net present value</em> from this deal is positive ($$5), you would choose
+<p>Because your <em>net present value</em> from this deal is positive ($5), you would choose
 to take advantage of this friend’s offer.</p>
 
 <p><strong>Friend Two</strong></p>
 
 <ul>
   <li>
-    <p>This friend takes your $$1 and gives 
-  you back $$10 in a fifty years.</p>
+    <p>This friend takes your $1 and gives 
+  you back $10 in a fifty years.</p>
   </li>
   <li>
-    <p>$$10 in fifty years sounds 
-  better than $$5 tomorrow, but …</p>
+    <p>$10 in fifty years sounds 
+  better than $5 tomorrow, but …</p>
   </li>
   <li>
     <p>Computing</p>
 
     <p><code class="highlighter-rouge">
-  presentValue(\$\$10, 50, 0.10) = \$\$10 / (1.0 + 0.10) ^ 50
+  presentValue(&amp;#36;10, 50, 0.10) = &amp;#36;10 / (1.0 + 0.10) ^ 50
  </code></p>
 
     <p>offer is worth about 8 cents today.</p>
   </li>
   <li>
     <p>Your <em>net</em> gain is the 0.08 dollars
-  you receive minus the $$1 you gave away, so you net −0.92 dollars.</p>
+  you receive minus the $1 you gave away, so you net −0.92 dollars.</p>
 
     <p>Because your <em>net present value</em> is negative (−0.92), you would decline
   this friend’s offer.</p>
@@ -852,20 +852,20 @@ to take advantage of this friend’s offer.</p>
 <h2 id="product-development-story">Product Development Story</h2>
 
 <p>Consider the following <a href="https://en.wikipedia.org/wiki/Net_present_value#Example">example from Wikipedia</a>,
-based on investing $$100,000 to create a new product:</p>
+based on investing $100,000 to create a new product:</p>
 
 <ul>
   <li>
-    <p>The product would cost you $$100,000 to develop.  That money would be gone forever.</p>
+    <p>The product would cost you $100,000 to develop.  That money would be gone forever.</p>
   </li>
   <li>
-    <p>Every year for the next 12 years, you would receive $$10,000 from sales
+    <p>Every year for the next 12 years, you would receive $10,000 from sales
   of the product.</p>
   </li>
 </ul>
 
-<p>In summary, you give away $$100,000 and 
-	you get $$120,000 back.  Is this 
+<p>In summary, you give away $100,000 and 
+	you get $120,000 back.  Is this 
 	a good deal?  Let’s look at the returns in terms of Net Present Value (NPV):</p>
 
 <table>
@@ -875,27 +875,27 @@ based on investing $$100,000 to create a new product:</p>
 <td><b>0</b></td> 
 <td>
 <table>
-<tr> <td> &minus;\$\$100,000</td></tr>
+<tr> <td> &minus;&#36;100,000</td></tr>
 <tr> <td><hr /></td></tr>
 <tr>  <td>(1+0.10)<sup><b>0</b></sup></td> </tr>
 </table>
 </td>
-<td>&nbsp;=&nbsp;&minus;\$\$100,000.00</td>
-<td>&minus;\$\$100,000.00</td>
+<td>&nbsp;=&nbsp;&minus;&#36;100,000.00</td>
+<td>&minus;&#36;100,000.00</td>
 <td> Initial investment, no return until year 1</td>
 </tr>
 <tr>
 <td><b>1</b></td> 
 <td>
 <table>
-<tr> <td> \$\$10,000</td></tr>
+<tr> <td> &#36;10,000</td></tr>
 <tr> <td> <hr /> </td></tr>
 <tr>  <td>(1+0.10)<sup><b>1</b></sup></td> </tr>
 </table>
 </td>
-<td>&nbsp;=&nbsp;\$\$9,090.91</td>
+<td>&nbsp;=&nbsp;&#36;9,090.91</td>
 <td>&minus;90,909.09</td>
-<td> The <b>Computation Result</b> column shows the yearly return of \$\$10,000,
+<td> The <b>Computation Result</b> column shows the yearly return of &#36;10,000,
 discounted by the rate (0.10) so it can be
 expressed in present (year-0) dollars</td>
 </tr>
@@ -903,12 +903,12 @@ expressed in present (year-0) dollars</td>
 <td><b>2</b></td> 
 <td>
 <table>
-<tr> <td> \$\$10,000</td></tr>
+<tr> <td> &#36;10,000</td></tr>
 <tr> <td> <hr /> </td></tr>
 <tr>  <td>(1+0.10)<sup><b>2</b></sup></td> </tr>
 </table>
 </td>
-<td>&nbsp;=&nbsp;\$\$8,264.46</td>
+<td>&nbsp;=&nbsp;&#36;8,264.46</td>
 <td>&minus;82,644.63</td>
 <td>The <b>Net Present Value</b> column shows the cumulative gain or loss </td>
 </tr>
@@ -916,12 +916,12 @@ expressed in present (year-0) dollars</td>
 <td><b>3</b></td> 
 <td>
 <table>
-<tr> <td> \$\$10,000</td></tr>
+<tr> <td> &#36;10,000</td></tr>
 <tr> <td> <hr /> </td></tr>
 <tr>  <td>(1+0.10)<sup><b>3</b></sup></td> </tr>
 </table>
 </td>
-<td>&nbsp;=&nbsp;\$\$7,513.15</td>
+<td>&nbsp;=&nbsp;&#36;7,513.15</td>
 <td>&minus;75,131.48</td>
 <td> </td>
 </tr>
@@ -929,12 +929,12 @@ expressed in present (year-0) dollars</td>
 <td><b>4</b></td> 
 <td>
 <table>
-<tr> <td> \$\$10,000</td></tr>
+<tr> <td> &#36;10,000</td></tr>
 <tr> <td> <hr /> </td></tr>
 <tr>  <td>(1+0.10)<sup><b>4</b></sup></td> </tr>
 </table>
 </td>
-<td>&nbsp;=&nbsp;\$\$6,830.13</td>
+<td>&nbsp;=&nbsp;&#36;6,830.13</td>
 <td>&minus;68,301.35</td>
 <td> </td>
 </tr>
@@ -942,12 +942,12 @@ expressed in present (year-0) dollars</td>
 <td><b>5</b></td> 
 <td>
 <table>
-<tr> <td> \$\$10,000</td></tr>
+<tr> <td> &#36;10,000</td></tr>
 <tr> <td> <hr /> </td></tr>
 <tr>  <td>(1+0.10)<sup><b>5</b></sup></td> </tr>
 </table>
 </td>
-<td>&nbsp;=&nbsp;\$\$6,209.21</td>
+<td>&nbsp;=&nbsp;&#36;6,209.21</td>
 <td>&minus;62,092.14</td>
 <td> </td>
 </tr>
@@ -955,12 +955,12 @@ expressed in present (year-0) dollars</td>
 <td><b>6</b></td> 
 <td>
 <table>
-<tr> <td> \$\$10,000</td></tr>
+<tr> <td> &#36;10,000</td></tr>
 <tr> <td> <hr /> </td></tr>
 <tr>  <td>(1+0.10)<sup><b>6</b></sup></td> </tr>
 </table>
 </td>
-<td>&nbsp;=&nbsp;\$\$5,644.74</td>
+<td>&nbsp;=&nbsp;&#36;5,644.74</td>
 <td>&minus;56,447.40</td>
 <td> </td>
 </tr>
@@ -968,12 +968,12 @@ expressed in present (year-0) dollars</td>
 <td><b>7</b></td> 
 <td>
 <table>
-<tr> <td> \$\$10,000</td></tr>
+<tr> <td> &#36;10,000</td></tr>
 <tr> <td> <hr /> </td></tr>
 <tr>  <td>(1+0.10)<sup><b>7</b></sup></td> </tr>
 </table>
 </td>
-<td>&nbsp;=&nbsp;\$\$5,131.58</td>
+<td>&nbsp;=&nbsp;&#36;5,131.58</td>
 <td>&minus;51,315.82</td>
 <td> </td>
 </tr>
@@ -981,26 +981,26 @@ expressed in present (year-0) dollars</td>
 <td><b>8</b></td> 
 <td>
 <table>
-<tr> <td> \$\$10,000</td></tr>
+<tr> <td> &#36;10,000</td></tr>
 <tr> <td> <hr /> </td></tr>
 <tr>  <td>(1+0.10)<sup><b>8</b></sup></td> </tr>
 </table>
 </td>
-<td>&nbsp;=&nbsp;\$\$4,665.07</td>
+<td>&nbsp;=&nbsp;&#36;4,665.07</td>
 <td>&minus;46,650.75</td>
-<td>In present value, the \$\$10,000 received in this year is
+<td>In present value, the &#36;10,000 received in this year is
 worth less than half! </td>
 </tr>
 <tr>
 <td><b>9</b></td> 
 <td>
 <table>
-<tr> <td> \$\$10,000</td></tr>
+<tr> <td> &#36;10,000</td></tr>
 <tr> <td> <hr /> </td></tr>
 <tr>  <td>(1+0.10)<sup><b>9</b></sup></td> </tr>
 </table>
 </td>
-<td>&nbsp;=&nbsp;\$\$4,240.98</td>
+<td>&nbsp;=&nbsp;&#36;4,240.98</td>
 <td>&minus;42,409.77</td>
 <td> </td>
 </tr>
@@ -1008,12 +1008,12 @@ worth less than half! </td>
 <td><b>10</b></td> 
 <td>
 <table>
-<tr> <td> \$\$10,000</td></tr>
+<tr> <td> &#36;10,000</td></tr>
 <tr> <td> <hr /> </td></tr>
 <tr>  <td>(1+0.10)<sup><b>10</b></sup></td> </tr>
 </table>
 </td>
-<td>&nbsp;=&nbsp;\$\$3,855.43</td>
+<td>&nbsp;=&nbsp;&#36;3,855.43</td>
 <td>&minus;38,554.34</td>
 <td> </td>
 </tr>
@@ -1021,12 +1021,12 @@ worth less than half! </td>
 <td><b>11</b></td> 
 <td>
 <table>
-<tr> <td> \$\$10,000</td></tr>
+<tr> <td> &#36;10,000</td></tr>
 <tr> <td> <hr /> </td></tr>
 <tr>  <td>(1+0.10)<sup><b>11</b></sup></td> </tr>
 </table>
 </td>
-<td>&nbsp;=&nbsp;\$\$3.504.94</td>
+<td>&nbsp;=&nbsp;&#36;3.504.94</td>
 <td>&minus;35,049.40</td>
 <td> </td>
 </tr>
@@ -1034,20 +1034,20 @@ worth less than half! </td>
 <td><b>12</b></td> 
 <td>
 <table>
-<tr> <td> \$\$10,000</td></tr>
+<tr> <td> &#36;10,000</td></tr>
 <tr> <td> <hr /> </td></tr>
 <tr>  <td>(1+0.10)<sup><b>12</b></sup></td> </tr>
 </table>
 </td>
-<td>&nbsp;=&nbsp;\$\$3,186.31</td>
+<td>&nbsp;=&nbsp;&#36;3,186.31</td>
 <td>&minus;31,863.09</td>
-<td>At the end of 12 years, we have \$\$120,000 but that is worth only
-\$\$68,136.91 in present (year-0) dollars, with each year's \$\$10,000 discounted
+<td>At the end of 12 years, we have &#36;120,000 but that is worth only
+&#36;68,136.91 in present (year-0) dollars, with each year's &#36;10,000 discounted
 to show present value.</td>
 </tr>
 </table>
 
-<p>The NPV of the $$100,000 investment is −31,863.09, which is a substantial loss.
+<p>The NPV of the $100,000 investment is −31,863.09, which is a substantial loss.
 Because the NPV is negative, this is not an investment you should make.</p>
 
 <h2 id="procedure-5">Procedure</h2>
@@ -1074,7 +1074,7 @@ Because the NPV is negative, this is not an investment you should make.</p>
 
 			<footer class="site-footer">
 	<p>
-		<small>Generated at  2016-07-17 22:03:11 -0500</small>.
+		<small>Generated at  2016-07-17 22:04:41 -0500</small>.
 	</p>
 	<p>
 		<small>
