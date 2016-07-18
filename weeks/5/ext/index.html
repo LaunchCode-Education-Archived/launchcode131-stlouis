@@ -686,7 +686,8 @@ following circumstances:</p>
   </tbody>
 </table>
 
-<p>This friend takes your $ 1 and gives you back $5 tomorrow.</p>
+<p>This friend takes your $1 
+and gives you back $5 tomorrow.</p>
 
 <table>
   <tbody>
@@ -696,20 +697,23 @@ following circumstances:</p>
   </tbody>
 </table>
 
-<p>This friend takes your $ 1 and gives you back $10 in fifty years.</p>
+<p>This friend takes your $1 and gives you 
+back $10 in fifty years.</p>
 
 <p>Which friend is offering you the better deal?</p>
 
 <ul>
   <li>
     <p>If we consider only the number of dollars you receive from these
-  two friends, then in 50 years you end up with either $5, or $10.</p>
+  two friends, then in 50 years you end up with either $5, 
+  or $10.</p>
   </li>
   <li>
     <p>It may therefore seem that Friend Two is offering you the better deal.</p>
   </li>
   <li>
-    <p>However, we know that $10 fifty years from now is not worth $10 today.</p>
+    <p>However, we know that $10 fifty years from now is 
+  not worth $10 today.</p>
   </li>
 </ul>
 
@@ -746,10 +750,11 @@ to compute the following:</p>
     <p>We model this computation by the function</p>
 
     <p><code class="highlighter-rouge">
-  futureValue(dollars, years, r) = dollars &amp;times; (1.0 + r)&lt;sup&gt;years&lt;/sup&gt;
+  futureValue(dollars, years, r) = dollars &amp;times; (1.0 + r) ^ years
  </code></p>
 
-    <p>Thus, $1 is the same now as $117 dollars fifty years from now.</p>
+    <p>Thus, $1 is the same now 
+  as $117 dollars fifty years from now.</p>
   </li>
   <li>
     <p>How much would I have to set aside today so that it would be worth
@@ -760,7 +765,7 @@ to compute the following:</p>
   of what we computed for the future:</p>
 
     <p><code class="highlighter-rouge">
-  presentValue(dollars, years, r) = dollars / (1.0 + r)&lt;sup&gt;years&lt;/sup&gt;
+  presentValue(dollars, years, r) = dollars / (1.0 + r) ^ years
  </code></p>
 
     <p>Thus, to have $1 fifty years from now, we would have to set aside
@@ -786,11 +791,13 @@ time annually.</p>
 
 <ul>
   <li>
-    <p>This friend takes your $1 and gives you back $5 tomorrow.</p>
+    <p>This friend takes your $1 and gives 
+  you back $5 tomorrow.</p>
   </li>
   <li>
     <p>With money changing
-  value annually, $5 tomorrow is the same as $5 today.</p>
+  value annually, $5 tomorrow 
+  is the same as $5 today.</p>
   </li>
   <li>
     <p>Computing</p>
@@ -798,16 +805,16 @@ time annually.</p>
 </ul>
 
 <p><code class="highlighter-rouge">
-	presentValue($5, 0, 0.10) = $5 / (1.0 + 0.10)&lt;sup&gt;0&lt;/sup&gt;&lt;/PRE&gt; yields $5.
+	presentValue($5, 0, 0.10) = $5 / (1.0 + 0.10) ^ 0
 </code></p>
 
+<div class="highlighter-rouge"><pre class="highlight"><code>yields $5. * This friend's offer is therefore worth $5 today. 
+</code></pre>
+</div>
+
 <ul>
-  <li>
-    <p>This friend’s offer is therefore worth $5 today.</p>
-  </li>
-  <li>
-    <p>Your <em>net</em> gain is the $5 you receive <em>minus</em> the $1 you gave away, so you net $4.</p>
-  </li>
+  <li>Your <em>net</em> gain is the $5 you receive <em>minus</em> the $1 you gave 
+  away, so you net $4.</li>
 </ul>
 
 <p>Because your <em>net present value</em> from this deal is positive ($5), you would choose
@@ -815,25 +822,32 @@ to take advantage of this friend’s offer.</p>
 
 <p><strong>Friend Two</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>* This friend takes your $1 and gives you back $10 in a fifty years.
+<ul>
+  <li>
+    <p>This friend takes your $1 and gives 
+  you back $10 in a fifty years.</p>
+  </li>
+  <li>
+    <p>$10 in fifty years sounds 
+  better than $5 tomorrow, but …</p>
+  </li>
+  <li>
+    <p>Computing</p>
 
-* $10 in fifty years sounds better than $5 tomorrow, but &amp;hellip;
+    <p><code class="highlighter-rouge">
+  presentValue($10, 50, 0.10) = $10 / (1.0 + 0.10) ^ 50
+ </code></p>
 
-* Computing
+    <p>offer is worth about 8 cents today.</p>
+  </li>
+  <li>
+    <p>Your <em>net</em> gain is the 0.08 dollars
+  you receive minus the $1 you gave away, so you net −0.92 dollars.</p>
 
-```
-presentValue($10, 50, 0.10) = $10 / (1.0 + 0.10)&lt;sup&gt;50&lt;/sup&gt;&lt;/PRE&gt; 
-```
-
-offer is worth about 8 cents today. 
- 
-* Your *net* gain is the 0.08 dollars
-you receive minus the $1 you gave away, so you net &amp;minus;0.92 dollars.
-
-Because your *net present value* is negative (&amp;minus;0.92), you would decline
-this friend's offer.
-</code></pre>
-</div>
+    <p>Because your <em>net present value</em> is negative (−0.92), you would decline
+  this friend’s offer.</p>
+  </li>
+</ul>
 
 <h2 id="product-development-story">Product Development Story</h2>
 
@@ -850,10 +864,11 @@ based on investing $100,000 to create a new product:</p>
   </li>
 </ul>
 
-<p>In summary, you give away $ 100,000 and you get $120,000 back.  Is this 
-a good deal?  Let’s look at the returns in terms of Net Present Value (NPV):</p>
+<p>In summary, you give away $100,000 and 
+	you get $120,000 back.  Is this 
+	a good deal?  Let’s look at the returns in terms of Net Present Value (NPV):</p>
 
-<p>&lt;TABLE BORDER CELLPADDING=5&gt;</p>
+<table>
 <tr>
 <th>Year</th> <th>Present Value<br />Computation<br />(for year 0)</th> <th>Computation<br />Result</th> <th>Net Present Value</th> <th> Comments</th> </tr>
 <tr>
@@ -1030,7 +1045,7 @@ worth less than half! </td>
 $68,136.91 in present (year-0) dollars, with each year's $10,000 discounted
 to show present value.</td>
 </tr>
-<p>&lt;/TABLE&gt;</p>
+</table>
 
 <p>The NPV of the $100,000 investment is −31,863.09, which is a substantial loss.
 Because the NPV is negative, this is not an investment you should make.</p>
@@ -1059,7 +1074,7 @@ Because the NPV is negative, this is not an investment you should make.</p>
 
 			<footer class="site-footer">
 	<p>
-		<small>Generated at  2016-07-17 21:49:49 -0500</small>.
+		<small>Generated at  2016-07-17 21:56:03 -0500</small>.
 	</p>
 	<p>
 		<small>
