@@ -64,6 +64,7 @@
       <li><a href="#two-friends-and-your-1" id="markdown-toc-two-friends-and-your-1">Two Friends and your $1</a></li>
       <li><a href="#net-present-value" id="markdown-toc-net-present-value">Net Present Value</a></li>
       <li><a href="#product-development-story" id="markdown-toc-product-development-story">Product Development Story</a></li>
+      <li><a href="#procedure-h4" id="markdown-toc-procedure-h4">Procedure &lt;/H4&gt;</a></li>
     </ul>
   </li>
 </ul>
@@ -783,32 +784,36 @@ time annually.</p>
   </tbody>
 </table>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>* This friend takes your $1 and gives you back $5 tomorrow.  
+<ul>
+  <li>
+    <p>This friend takes your $1 and gives you back $5 tomorrow.</p>
+  </li>
+  <li>
+    <p>With money changing
+  value annually, $5 tomorrow is the same as $5 today.</p>
+  </li>
+  <li>
+    <p>Computing</p>
+  </li>
+</ul>
 
-* With money changing
-	value annually, $5 tomorrow is the same as $5 today.  
-
-* Computing
-
-```
+<p><code class="highlighter-rouge">
 	presentValue($5, 0, 0.10) = $5 / (1.0 + 0.10)&lt;sup&gt;0&lt;/sup&gt;&lt;/PRE&gt; yields $5.
+</code></p>
 
-* This friend's offer is therefore worth $5 today. 
+<ul>
+  <li>
+    <p>This friend’s offer is therefore worth $5 today.</p>
+  </li>
+  <li>
+    <p>Your <em>net</em> gain is the $5 you receive <em>minus</em> the $1 you gave away, so you net $4.</p>
+  </li>
+</ul>
 
-* Your *net* gain is the $5 you receive *minus* the $1 you gave away, so you net $4.
+<p>Because your <em>net present value</em> from this deal is positive ($5), you would choose
+to take advantage of this friend’s offer.</p>
 
-Because your *net present value* from this deal is positive ($5), you would choose
-to take advantage of this friend's offer.
-</code></pre>
-</div>
-
-<table>
-  <tbody>
-    <tr>
-      <td><strong>Friend Two</strong></td>
-    </tr>
-  </tbody>
-</table>
+<p><strong>Friend Two</strong></p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>* This friend takes your $1 and gives you back $10 in a fifty years.
 
@@ -848,212 +853,213 @@ based on investing $100,000 to create a new product:</p>
 <p>In summary, you give away $100,000 and you get $120,000 back.  Is this 
 a good deal?  Let’s look at the returns in terms of Net Present Value (NPV):</p>
 
-<p>
-&lt;TABLE BORDER CELLPADDING=5&gt;
-&lt;TR&gt;
-&lt;TH&gt;Year&lt;/TH&gt; &lt;TH&gt;Present Value<br />Computation<br />(for year 0)&lt;/TH&gt; &lt;TH&gt;Computation<br />Result&lt;/TH&gt; &lt;TH&gt;Net Present Value&lt;/TH&gt; &lt;TH&gt; Comments&lt;/TH&gt; &lt;/TR&gt;
-&lt;TR&gt;
- &lt;TD ALIGN=CENTER&gt;<b>0</b>&lt;/TD&gt; 
- &lt;TD ALIGN=CENTER&gt;
-  &lt;TABLE&gt;
-    &lt;TR&gt; &lt;TD ALIGN=CENTER&gt; −$100,000&lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt; &lt;TD&gt;&lt;HR&gt;&lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt;  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>0</b></sup>&lt;/TD&gt; &lt;/TR&gt;
-  &lt;/TABLE&gt;
-  &lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt; = −$100,000.00&lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt;−$100,000.00&lt;/TD&gt;
- &lt;TD&gt; Initial investment, no return until year 1&lt;/TD&gt;
-&lt;/TR&gt;
-&lt;TR&gt;
- &lt;TD ALIGN=CENTER&gt;<b>1</b>&lt;/TD&gt; 
- &lt;TD ALIGN=CENTER&gt;
-  &lt;TABLE&gt;
-    &lt;TR&gt; &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt; &lt;TD&gt; &lt;HR&gt; &lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt;  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>1</b></sup>&lt;/TD&gt; &lt;/TR&gt;
-  &lt;/TABLE&gt;
-  &lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt; = $9,090.91&lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt;−90,909.09&lt;/TD&gt;
- &lt;TD&gt; The <b>Computation Result</b> column shows the yearly return of $10,000,
+<p>&lt;TABLE BORDER CELLPADDING=5&gt;</p>
+<tr>
+<th>Year</th> <th>Present Value<br />Computation<br />(for year 0)</th> <th>Computation<br />Result</th> <th>Net Present Value</th> <th> Comments</th> </tr>
+<tr>
+&lt;TD ALIGN=CENTER&gt;<b>0</b>&lt;/TD&gt; 
+&lt;TD ALIGN=CENTER&gt;
+<table>
+<tr> &lt;TD ALIGN=CENTER&gt; &minus;$100,000&lt;/TD&gt;</tr>
+<tr> <td><hr /></td></tr>
+<tr>  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>0</b></sup>&lt;/TD&gt; </tr>
+</table>
+&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&nbsp;=&nbsp;&minus;$100,000.00&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&minus;$100,000.00&lt;/TD&gt;
+<td> Initial investment, no return until year 1</td>
+</tr>
+<tr>
+&lt;TD ALIGN=CENTER&gt;<b>1</b>&lt;/TD&gt; 
+&lt;TD ALIGN=CENTER&gt;
+<table>
+<tr> &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;</tr>
+<tr> <td> <hr /> </td></tr>
+<tr>  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>1</b></sup>&lt;/TD&gt; </tr>
+</table>
+&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&nbsp;=&nbsp;$9,090.91&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&minus;90,909.09&lt;/TD&gt;
+<td> The <b>Computation Result</b> column shows the yearly return of $10,000,
 discounted by the rate (0.10) so it can be
-expressed in present (year-0) dollars&lt;/TD&gt;
-&lt;/TR&gt;
-&lt;TR&gt;
- &lt;TD ALIGN=CENTER&gt;<b>2</b>&lt;/TD&gt; 
- &lt;TD ALIGN=CENTER&gt;
-  &lt;TABLE&gt;
-    &lt;TR&gt; &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt; &lt;TD&gt; &lt;HR&gt; &lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt;  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>2</b></sup>&lt;/TD&gt; &lt;/TR&gt;
-  &lt;/TABLE&gt;
-  &lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt; = $8,264.46&lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt;−82,644.63&lt;/TD&gt;
- &lt;TD&gt;The <b>Net Present Value</b> column shows the cumulative gain or loss &lt;/TD&gt;
-&lt;/TR&gt;
-&lt;TR&gt;
- &lt;TD ALIGN=CENTER&gt;<b>3</b>&lt;/TD&gt; 
- &lt;TD ALIGN=CENTER&gt;
-  &lt;TABLE&gt;
-    &lt;TR&gt; &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt; &lt;TD&gt; &lt;HR&gt; &lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt;  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>3</b></sup>&lt;/TD&gt; &lt;/TR&gt;
-  &lt;/TABLE&gt;
-  &lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt; = $7,513.15&lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt;−75,131.48&lt;/TD&gt;
- &lt;TD&gt; &lt;/TD&gt;
-&lt;/TR&gt;
-&lt;TR&gt;
- &lt;TD ALIGN=CENTER&gt;<b>4</b>&lt;/TD&gt; 
- &lt;TD ALIGN=CENTER&gt;
-  &lt;TABLE&gt;
-    &lt;TR&gt; &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt; &lt;TD&gt; &lt;HR&gt; &lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt;  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>4</b></sup>&lt;/TD&gt; &lt;/TR&gt;
-  &lt;/TABLE&gt;
-  &lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt; = $6,830.13&lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt;−68,301.35&lt;/TD&gt;
- &lt;TD&gt; &lt;/TD&gt;
-&lt;/TR&gt;
-&lt;TR&gt;
- &lt;TD ALIGN=CENTER&gt;<b>5</b>&lt;/TD&gt; 
- &lt;TD ALIGN=CENTER&gt;
-  &lt;TABLE&gt;
-    &lt;TR&gt; &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt; &lt;TD&gt; &lt;HR&gt; &lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt;  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>5</b></sup>&lt;/TD&gt; &lt;/TR&gt;
-  &lt;/TABLE&gt;
-  &lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt; = $6,209.21&lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt;−62,092.14&lt;/TD&gt;
- &lt;TD&gt; &lt;/TD&gt;
-&lt;/TR&gt;
-&lt;TR&gt;
- &lt;TD ALIGN=CENTER&gt;<b>6</b>&lt;/TD&gt; 
- &lt;TD ALIGN=CENTER&gt;
-  &lt;TABLE&gt;
-    &lt;TR&gt; &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt; &lt;TD&gt; &lt;HR&gt; &lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt;  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>6</b></sup>&lt;/TD&gt; &lt;/TR&gt;
-  &lt;/TABLE&gt;
-  &lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt; = $5,644.74&lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt;−56,447.40&lt;/TD&gt;
- &lt;TD&gt; &lt;/TD&gt;
-&lt;/TR&gt;
-&lt;TR&gt;
- &lt;TD ALIGN=CENTER&gt;<b>7</b>&lt;/TD&gt; 
- &lt;TD ALIGN=CENTER&gt;
-  &lt;TABLE&gt;
-    &lt;TR&gt; &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt; &lt;TD&gt; &lt;HR&gt; &lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt;  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>7</b></sup>&lt;/TD&gt; &lt;/TR&gt;
-  &lt;/TABLE&gt;
-  &lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt; = $5,131.58&lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt;−51,315.82&lt;/TD&gt;
- &lt;TD&gt; &lt;/TD&gt;
-&lt;/TR&gt;
-&lt;TR&gt;
- &lt;TD ALIGN=CENTER&gt;<b>8</b>&lt;/TD&gt; 
- &lt;TD ALIGN=CENTER&gt;
-  &lt;TABLE&gt;
-    &lt;TR&gt; &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt; &lt;TD&gt; &lt;HR&gt; &lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt;  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>8</b></sup>&lt;/TD&gt; &lt;/TR&gt;
-  &lt;/TABLE&gt;
-  &lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt; = $4,665.07&lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt;−46,650.75&lt;/TD&gt;
- &lt;TD&gt;In present value, the $10,000 received in this year is
-worth less than half! &lt;/TD&gt;
-&lt;/TR&gt;
-&lt;TR&gt;
- &lt;TD ALIGN=CENTER&gt;<b>9</b>&lt;/TD&gt; 
- &lt;TD ALIGN=CENTER&gt;
-  &lt;TABLE&gt;
-    &lt;TR&gt; &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt; &lt;TD&gt; &lt;HR&gt; &lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt;  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>9</b></sup>&lt;/TD&gt; &lt;/TR&gt;
-  &lt;/TABLE&gt;
-  &lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt; = $4,240.98&lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt;−42,409.77&lt;/TD&gt;
- &lt;TD&gt; &lt;/TD&gt;
-&lt;/TR&gt;
-&lt;TR&gt;
- &lt;TD ALIGN=CENTER&gt;<b>10</b>&lt;/TD&gt; 
- &lt;TD ALIGN=CENTER&gt;
-  &lt;TABLE&gt;
-    &lt;TR&gt; &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt; &lt;TD&gt; &lt;HR&gt; &lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt;  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>10</b></sup>&lt;/TD&gt; &lt;/TR&gt;
-  &lt;/TABLE&gt;
-  &lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt; = $3,855.43&lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt;−38,554.34&lt;/TD&gt;
- &lt;TD&gt; &lt;/TD&gt;
-&lt;/TR&gt;
-&lt;TR&gt;
- &lt;TD ALIGN=CENTER&gt;<b>11</b>&lt;/TD&gt; 
- &lt;TD ALIGN=CENTER&gt;
-  &lt;TABLE&gt;
-    &lt;TR&gt; &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt; &lt;TD&gt; &lt;HR&gt; &lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt;  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>11</b></sup>&lt;/TD&gt; &lt;/TR&gt;
-  &lt;/TABLE&gt;
-  &lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt; = $3.504.94&lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt;−35,049.40&lt;/TD&gt;
- &lt;TD&gt; &lt;/TD&gt;
-&lt;/TR&gt;
-&lt;TR&gt;
- &lt;TD ALIGN=CENTER&gt;<b>12</b>&lt;/TD&gt; 
- &lt;TD ALIGN=CENTER&gt;
-  &lt;TABLE&gt;
-    &lt;TR&gt; &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt; &lt;TD&gt; &lt;HR&gt; &lt;/TD&gt;&lt;/TR&gt;
-    &lt;TR&gt;  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>12</b></sup>&lt;/TD&gt; &lt;/TR&gt;
-  &lt;/TABLE&gt;
-  &lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt; = $3,186.31&lt;/TD&gt;
- &lt;TD ALIGN=RIGHT&gt;−31,863.09&lt;/TD&gt;
- &lt;TD&gt;At the end of 12 years, we have $120,000 but that is worth only
-$68,136.91 in present (year-0) dollars, with each year’s $10,000 discounted
-to show present value.&lt;/TD&gt;
-&lt;/TR&gt;
-&lt;/TABLE&gt;
+expressed in present (year-0) dollars</td>
+</tr>
+<tr>
+&lt;TD ALIGN=CENTER&gt;<b>2</b>&lt;/TD&gt; 
+&lt;TD ALIGN=CENTER&gt;
+<table>
+<tr> &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;</tr>
+<tr> <td> <hr /> </td></tr>
+<tr>  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>2</b></sup>&lt;/TD&gt; </tr>
+</table>
+&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&nbsp;=&nbsp;$8,264.46&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&minus;82,644.63&lt;/TD&gt;
+<td>The <b>Net Present Value</b> column shows the cumulative gain or loss </td>
+</tr>
+<tr>
+&lt;TD ALIGN=CENTER&gt;<b>3</b>&lt;/TD&gt; 
+&lt;TD ALIGN=CENTER&gt;
+<table>
+<tr> &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;</tr>
+<tr> <td> <hr /> </td></tr>
+<tr>  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>3</b></sup>&lt;/TD&gt; </tr>
+</table>
+&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&nbsp;=&nbsp;$7,513.15&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&minus;75,131.48&lt;/TD&gt;
+<td> </td>
+</tr>
+<tr>
+&lt;TD ALIGN=CENTER&gt;<b>4</b>&lt;/TD&gt; 
+&lt;TD ALIGN=CENTER&gt;
+<table>
+<tr> &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;</tr>
+<tr> <td> <hr /> </td></tr>
+<tr>  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>4</b></sup>&lt;/TD&gt; </tr>
+</table>
+&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&nbsp;=&nbsp;$6,830.13&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&minus;68,301.35&lt;/TD&gt;
+<td> </td>
+</tr>
+<tr>
+&lt;TD ALIGN=CENTER&gt;<b>5</b>&lt;/TD&gt; 
+&lt;TD ALIGN=CENTER&gt;
+<table>
+<tr> &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;</tr>
+<tr> <td> <hr /> </td></tr>
+<tr>  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>5</b></sup>&lt;/TD&gt; </tr>
+</table>
+&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&nbsp;=&nbsp;$6,209.21&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&minus;62,092.14&lt;/TD&gt;
+<td> </td>
+</tr>
+<tr>
+&lt;TD ALIGN=CENTER&gt;<b>6</b>&lt;/TD&gt; 
+&lt;TD ALIGN=CENTER&gt;
+<table>
+<tr> &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;</tr>
+<tr> <td> <hr /> </td></tr>
+<tr>  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>6</b></sup>&lt;/TD&gt; </tr>
+</table>
+&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&nbsp;=&nbsp;$5,644.74&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&minus;56,447.40&lt;/TD&gt;
+<td> </td>
+</tr>
+<tr>
+&lt;TD ALIGN=CENTER&gt;<b>7</b>&lt;/TD&gt; 
+&lt;TD ALIGN=CENTER&gt;
+<table>
+<tr> &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;</tr>
+<tr> <td> <hr /> </td></tr>
+<tr>  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>7</b></sup>&lt;/TD&gt; </tr>
+</table>
+&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&nbsp;=&nbsp;$5,131.58&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&minus;51,315.82&lt;/TD&gt;
+<td> </td>
+</tr>
+<tr>
+&lt;TD ALIGN=CENTER&gt;<b>8</b>&lt;/TD&gt; 
+&lt;TD ALIGN=CENTER&gt;
+<table>
+<tr> &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;</tr>
+<tr> <td> <hr /> </td></tr>
+<tr>  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>8</b></sup>&lt;/TD&gt; </tr>
+</table>
+&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&nbsp;=&nbsp;$4,665.07&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&minus;46,650.75&lt;/TD&gt;
+<td>In present value, the $10,000 received in this year is
+worth less than half! </td>
+</tr>
+<tr>
+&lt;TD ALIGN=CENTER&gt;<b>9</b>&lt;/TD&gt; 
+&lt;TD ALIGN=CENTER&gt;
+<table>
+<tr> &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;</tr>
+<tr> <td> <hr /> </td></tr>
+<tr>  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>9</b></sup>&lt;/TD&gt; </tr>
+</table>
+&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&nbsp;=&nbsp;$4,240.98&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&minus;42,409.77&lt;/TD&gt;
+<td> </td>
+</tr>
+<tr>
+&lt;TD ALIGN=CENTER&gt;<b>10</b>&lt;/TD&gt; 
+&lt;TD ALIGN=CENTER&gt;
+<table>
+<tr> &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;</tr>
+<tr> <td> <hr /> </td></tr>
+<tr>  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>10</b></sup>&lt;/TD&gt; </tr>
+</table>
+&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&nbsp;=&nbsp;$3,855.43&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&minus;38,554.34&lt;/TD&gt;
+<td> </td>
+</tr>
+<tr>
+&lt;TD ALIGN=CENTER&gt;<b>11</b>&lt;/TD&gt; 
+&lt;TD ALIGN=CENTER&gt;
+<table>
+<tr> &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;</tr>
+<tr> <td> <hr /> </td></tr>
+<tr>  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>11</b></sup>&lt;/TD&gt; </tr>
+</table>
+&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&nbsp;=&nbsp;$3.504.94&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&minus;35,049.40&lt;/TD&gt;
+<td> </td>
+</tr>
+<tr>
+&lt;TD ALIGN=CENTER&gt;<b>12</b>&lt;/TD&gt; 
+&lt;TD ALIGN=CENTER&gt;
+<table>
+<tr> &lt;TD ALIGN=CENTER&gt; $10,000&lt;/TD&gt;</tr>
+<tr> <td> <hr /> </td></tr>
+<tr>  &lt;TD ALIGN=CENTER&gt;(1+0.10)<sup><b>12</b></sup>&lt;/TD&gt; </tr>
+</table>
+&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&nbsp;=&nbsp;$3,186.31&lt;/TD&gt;
+&lt;TD ALIGN=RIGHT&gt;&minus;31,863.09&lt;/TD&gt;
+<td>At the end of 12 years, we have $120,000 but that is worth only
+$68,136.91 in present (year-0) dollars, with each year's $10,000 discounted
+to show present value.</td>
+</tr>
+<p>&lt;/TABLE&gt;</p>
 
-The NPV of the $100,000 investment is −31,863.09, which is a substantial loss.
-Because the NPV is negative, this is not an investment you should make.
+<p>The NPV of the $100,000 investment is −31,863.09, which is a substantial loss.
+Because the NPV is negative, this is not an investment you should make.</p>
 
+<h2 id="procedure-h4">Procedure &lt;/H4&gt;</h2>
 
-## Procedure &lt;/H4&gt;
+<ul>
+  <li>
+    <p>Find and open
+  the <code class="highlighter-rouge">NPV</code> class found in the
+  <code class="highlighter-rouge">netpresentvalue</code> package of the <code class="highlighter-rouge">extensions</code> source
+  folder in your repository.</p>
+  </li>
+  <li>
+    <p>Using the information provided above, your task is to complete the methods within that class</p>
+  </li>
+  <li>
+    <p>Test your work by running the provided unit test.  It should show green
+  and produce a table similar to the one provided above.</p>
+  </li>
+</ul>
 
-
-* Find and open
-	the <code class="highlighter-rouge">NPV</code> class found in the
-	<code class="highlighter-rouge">netpresentvalue</code> package of the <code class="highlighter-rouge">extensions</code> source
-	folder in your repository.
-
-* Using the information provided above, your task is to complete the methods within that class
-
-* Test your work by running the provided unit test.  It should show green
-	and produce a table similar to the one provided above.
-
-
-</p>
 
 				</article>
 			</div>
 
 			<footer class="site-footer">
 	<p>
-		<small>Generated at  2016-07-17 21:40:59 -0500</small>.
+		<small>Generated at  2016-07-17 21:47:07 -0500</small>.
 	</p>
 	<p>
 		<small>
